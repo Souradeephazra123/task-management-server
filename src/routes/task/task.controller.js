@@ -74,14 +74,14 @@ async function createTask(req, res) {
 
 async function getTask(req, res) {
   try {
-    const { userId } = req.body;
-    if (!userId) {
+    const { id } = req.params;
+    if (!id) {
       return res.status(400).json({ message: "Please provide the user id" });
     }
-    if (!findUserById) {
+    if (!findUserById(id)) {
       return res.status(400).json({ message: "User does not exist" });
     }
-    const tasks = await getTaskOfUser(userId);
+    const tasks = await getTaskOfUser(id);
     return res.status(200).json(tasks);
   } catch (error) {
     res.status(400).json({ message: error.message });

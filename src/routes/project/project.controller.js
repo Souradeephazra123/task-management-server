@@ -61,8 +61,8 @@ async function createProject(req, res) {
 
 async function getProject(req, res) {
   try {
-    const { userId } = req.body;
-    const projects = await getAllProject(userId);
+    const { id } = req.params;
+    const projects = await getAllProject(id);
     return res.status(200).json(projects);
   } catch (error) {
     res.status(400).json({ message: error.message });

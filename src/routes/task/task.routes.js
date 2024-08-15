@@ -4,7 +4,7 @@ import { createTask, deleteTask, getTask, updateSelectedTask } from "./task.cont
 const TaskRouter = express.Router();
 
 TaskRouter.post("/task", createTask);
-TaskRouter.get("/task", getTask);
+TaskRouter.get("/task/:id", getTask);
 TaskRouter.put("/task", updateSelectedTask);
 TaskRouter.delete("/task", deleteTask);
 

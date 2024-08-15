@@ -4,7 +4,7 @@ import { createProject, deleteProject, getProject, updateSelectedProject } from 
 const ProjectRouter = express.Router();
 
 ProjectRouter.post('/project',createProject );
-ProjectRouter.get('/project',getProject );
+ProjectRouter.get('/project/:id',getProject );
 ProjectRouter.put('/project',updateSelectedProject );
 ProjectRouter.delete('/project',deleteProject );
 
