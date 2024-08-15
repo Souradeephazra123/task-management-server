@@ -21,11 +21,9 @@ post
 }
 
 #### get all task of a user:
-/task
+/task/:id
 get
-{
-"userId": 101,(required)
-}
+
 
 #### update task of a user with title
 /task
@@ -62,11 +60,9 @@ post
 }
 
 #### get selected user all project
-/project
+/project/:id
 get
-{
-"userId":101
-}
+
 
 #### updated selected project
 /project
