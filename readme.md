@@ -1,3 +1,9 @@
+At forst clone the project and run the project by
+1.npm install
+2.npm run watch
+
+You have to always run backend server
+
 # auth:-
 #### signup:- 
 /signup 
